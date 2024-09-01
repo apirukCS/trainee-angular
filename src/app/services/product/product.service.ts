@@ -1,5 +1,5 @@
-import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
-import { Product, ResponseProduct } from './product.model';
+import { Injectable } from '@angular/core';
+import { ResponseProduct } from './product.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import * as qs from 'qs';
 import { Observable } from 'rxjs';
@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class ProductService {
   path = 'https://dev6.resrun-pos.com/rails-api';
-  constructor(private http: HttpClient, @Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(private http: HttpClient) {}
 
   getProducts(params: any): Observable<ResponseProduct> {
     let token = sessionStorage.getItem('access_token');
