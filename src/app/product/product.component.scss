@@ -1,0 +1,28 @@
+table{
+    width: 100%;
+    border: 0.5px solid black;
+    th, td{
+        border: 0.5px solid black;
+        width: 25%;
+        text-align: center;
+
+        img{
+            width: 20%;
+        }
+    }
+}
+
+.margin-y{
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.btn-logout{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    width: 120px;
+    height: 60px;
+    background-color: yellow;
+}
+

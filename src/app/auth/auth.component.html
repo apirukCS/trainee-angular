@@ -1,0 +1,13 @@
+<form [formGroup]="form">
+  <div class="center">
+    <app-input
+      formControlName="username"
+      [placeHolder]="'username'"
+    ></app-input>
+    <app-input
+      formControlName="password"
+      [placeHolder]="'password'"
+    ></app-input>
+    <button (click)="onLogin()">Login</button>
+  </div>
+</form>

@@ -1,0 +1,29 @@
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products?.data; let i = index">
+      <td>{{ product.id }}</td>
+      <td>
+        <img *ngIf="product.image_url" src="{{ product.image_url }}" alt="" />
+        <p *ngIf="!product.image_url">Image not found</p>
+      </td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }}</td>
+    </tr>
+  </tbody>
+</table>
+<div class="margin-y">
+  <app-pager-table
+    [totalItems]="products ? products.total : 0"
+    [currentPage]="params.page"
+    (onPageChange)="onPageTableChange($event)"
+  ></app-pager-table>
+</div>
+<button class="btn-logout" (click)="onLogout()">Logout</button>

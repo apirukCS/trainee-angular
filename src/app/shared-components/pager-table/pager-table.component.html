@@ -1,0 +1,7 @@
+<div class="pager">
+    <div *ngFor="let i of [].constructor(countPage); let index = index">
+        <div [ngClass]="{'selected': currentPage == (index + 1)}" (click)="onClick(index+1)">
+            <a>{{index + 1}}</a>
+        </div>
+    </div>
+</div>

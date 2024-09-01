@@ -25,3 +25,26 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+<!--
+#New project angular
+ng new 'project_name'
+
+#New project angular and config cli version
+npx -p @angular/cli@'version_number' ng new 'project_name'
+
+#Generate module and routing
+ng g m 'module_name' --routing
+
+#Generate component
+ng g c 'component_name'
+
+#Generate service
+ng g s 'service_name'
+
+#Generate model
+ng generate interface 'model_name' --type=model
+
+#Run project
+ng serve / ng s
+-->
